@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personel Portfolio </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f58186fca5.js" crossorigin="anonymous"></script>
+</head>
+
+
+                          <!-- Header Section -->
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Information science Engineer</p>
+            <h1>Hi, I'm<span> SweeKrithi Shetty</span><br>From Mangalore</h1>
+        </div>
+    </div>
+</div>
+
+                                 <!-- About Section  -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/About.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a passionate and dedicated professional with a strong educational background in Information Science. I recently graduated with a degree in Information Science, equipping me with a solid foundation in the field and a comprehensive understanding of the principles and practices that drive modern information systems.My fascination with technology and its potential to transform businesses and society led me to specialize in Information Science. I am particularly interested in exploring the intersections of data, technology, and human interaction to develop innovative solutions and improve user experiences.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                    <p class="tab-links"onclick="opentab('internship')">Internship</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web APP Development</li>
+                        <li><span>Cyber security</span><br>Tier1 Knowledge</li>
+                        <li><span>C,C++,Java</span><br>Programing Language</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019-2023 CGPA:9.3</span><br>Mangalore Insitute Of Technology & Engineering</li>
+                        <li><span>2017-2019 Percentage:92.5</span><br>Alva's PU College</li>
+                        <li><span>2017  Percentage:93.44</span><br>Ideal Engilish Medium School</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="internship">
+                    <ul>
+                        <li><span>Security Analyst</span><br>DLithe</li>
+                        <li><span>Front-End Development Intern</span><br>KodNest</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                                 <!-- portfolio -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.jpg">
+                <div class="layer">
+                    <h3>BLOG</h3>
+                    <p>Blog of cyber security</p>
+                    <a href="https://medium.com/@sweeshetty/cyber-security-28f95b395bcc"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.jpg">
+                <div class="layer">
+                    <h3>Projects</h3>
+                    <p>Academic Projects</p>
+                    <a href="https://github.com/sweekrithi-shetty"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work3.jfif">
+                <div class="layer">
+                    <h3>Portfolio</h3>
+                    <p>It contains Portfolio which I have made</p>
+                    <a href="https://github.com/sweekrithi-shetty"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        <div>
+    </div>
+</div>
+<!-- .................................contact.......... ..................................................-->
+
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-sharp fa-solid fa-envelope-circle-check"></i>sweeshetty@gmail.com </p>
+                <p><i class="fa-solid fa-phone"></i>8888888888</p>
+                <div class="social-icons">
+                    <a href="https://bit.ly/38ZNyh9"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/sweekrithi-shetty"><i class="fa-brands fa-github"></i></a>
+                    
+                </div>
+                <a href="SWEEEPORTFOLIO\SWEEKRITHI_RESUME.PDF"  download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="10" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; Thanks for connecting <i class="fa-solid fa-heart"></i></p>
+    </div>
+ </div>
+
+
+<!-- js of tabs of about -->
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+         tablink.classList.remove("active-link");
+        }
+       for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+ <!-- js of tabs of home smaller screen -->
+
+
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzPXF3B8fHj4pCInF_9AqK6wdiB1Rh--Js8TUc0NHIH2gW61qzNYG41bnE31KU0OU8/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!',error.message))
+    })
+  </script>
+</body>
+</html>
+   
